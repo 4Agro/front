@@ -1,0 +1,24 @@
+<section class="chat-container">
+    <section class="circle-avatar" (click)="toggleChat()">
+        <img src="assets/images/avatar.png">
+    </section>
+    
+    <section *ngIf="openChat" class="chat">
+        <section class="chat-header">
+            <p class="title">Titulo</p>
+            <img (click)="toggleChat()" class="icon" src="assets/images/close.svg">
+        </section>
+        <section class="chat-content">
+            <div *ngFor="let message of messages" [ngClass]="message?.role !== 'user' ? 'chat-left' : 'chat-right'">
+                <div class="chat-message">
+                    <p class="header-message">{{message?.role !== 'user' ? 'Seu Zé' : 'User'}}</p>
+                    <p>{{message?.content}}</p>
+                </div>
+            </div>
+        </section>
+        <section class="chat-footer" [formGroup]="form">
+            <textarea class="text" formControlName="message"></textarea>
+            <button [disabled]="form.invalid" class="button" (click)="sendMessage()">Enviar</button>
+        </section>
+    </section>
+</section>

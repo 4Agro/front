@@ -1,0 +1,69 @@
+:host {
+    .cointainer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #6A5FFF;
+        padding: 16px 128px;
+        .logo {
+            width: 70px;
+        }
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 55px;
+            .menu-items {
+                display: flex;
+                align-items: center;
+                gap: 48px;
+                .item {
+                    cursor: pointer;
+                    margin: 0;
+                    color: #ffffff;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    transition: .3s ease-in-out;
+                    &:hover {
+                        color: #2CF28E; 
+                    }
+                }
+            }
+            .menu-meet-our-ai {
+                border-left: 1px solid #ffffff;
+                border-right: 1px solid #ffffff;
+                padding: 0 55px;
+                .item-meet-our-ai {
+                    cursor: pointer;
+                    margin: 0;
+                    color: #ffffff;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    transition: .3s ease-in-out;
+                    &:hover {
+                        color: #2CF28E; 
+                    }
+                }
+            }
+            .btn-login {
+                cursor: pointer;
+                padding: 8px 40px;
+                background-color: #2CF28E;
+                border-radius: 12px;
+                border: 1px solid #2CF28E;
+                color: #6A5FFF;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 1.5rem;
+                transition: .3s ease-in-out;
+                transform: scale(0.97);
+
+                &:hover {
+                    opacity: .9;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
