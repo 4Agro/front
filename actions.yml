@@ -1,0 +1,35 @@
+name: 'FTP Deploy Locaweb'
+author: 'Locaweb'
+description: 'Automatize o envio de arquivos de FTP do seu site para o seu site Locaweb!'
+inputs:
+  host:
+    description: 'FTP host'
+    required: true
+  user:
+    description: 'FTP user'
+    required: true
+  password:
+    description: 'FTP password'
+    required: true
+  forceSsl:
+    description: 'Force SSL encryption'
+    required: false
+    default: 'false'
+  localDir:
+    description: 'Local directory'
+    required: false
+    default: '.'
+  remoteDir:
+    description: 'Remote directory'
+    required: false
+    default: 'public_html'
+  options:
+    description: 'Additional mirror command options'
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  color: 'red'
+  icon: 'upload-cloud'
